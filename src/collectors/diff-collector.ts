@@ -93,10 +93,11 @@ function parseFileSection(section: string): ParsedDiff | null {
 	const file = pathMatch[2]!
 	const from = pathMatch[1]!
 
-	// Detect file status
-	let status: 'added' | 'deleted' | 'modified' | 'renamed' = 'modified'
-	let additions = 0
-	let deletions = 0
+	// Detect file status and parse hunks
+	let status: 'added' | 'deleted' | 'modified' | 'renamed' = 'modified',
+		currentHunk: DiffHunk | null = null,
+		additions = 0,
+		deletions = 0
 
 	// Check for new file marker
 	if (lines.some(l => l.startsWith('new file mode'))) {
@@ -113,7 +114,6 @@ function parseFileSection(section: string): ParsedDiff | null {
 
 	// Parse hunks
 	const hunks: DiffHunk[] = []
-	let currentHunk: DiffHunk | null = null
 
 	for (const line of lines) {
 		// Hunk header: @@ -oldStart,oldCount +newStart,newCount @@ context

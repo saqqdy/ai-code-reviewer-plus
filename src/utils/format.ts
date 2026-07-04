@@ -2,7 +2,7 @@
  * Formatting utility functions for AI Code Reviewer
  */
 
-import type { ReviewFinding, ReviewResult, ParsedDiff } from '../types'
+import type { ParsedDiff, ReviewFinding, ReviewResult } from '../types'
 
 /**
  * Format a single finding as Markdown
@@ -78,35 +78,35 @@ export function formatReviewReport(result: ReviewResult): string {
 	if (blockers.length > 0) {
 		output += `## 🚫 Blockers (Must Fix)\n\n`
 		for (const f of blockers) {
-			output += formatFinding(f) + `\n`
+			output += `${formatFinding(f)  }\n`
 		}
 	}
 
 	if (high.length > 0) {
 		output += `## 🔴 High Priority\n\n`
 		for (const f of high) {
-			output += formatFinding(f) + `\n`
+			output += `${formatFinding(f)  }\n`
 		}
 	}
 
 	if (medium.length > 0) {
 		output += `## 🟡 Medium Priority\n\n`
 		for (const f of medium) {
-			output += formatFinding(f) + `\n`
+			output += `${formatFinding(f)  }\n`
 		}
 	}
 
 	if (low.length > 0) {
 		output += `## 🟢 Low Priority\n\n`
 		for (const f of low) {
-			output += formatFinding(f) + `\n`
+			output += `${formatFinding(f)  }\n`
 		}
 	}
 
 	if (suggestions.length > 0) {
 		output += `## 💡 Suggestions\n\n`
 		for (const f of suggestions) {
-			output += formatFinding(f) + `\n`
+			output += `${formatFinding(f)  }\n`
 		}
 	}
 

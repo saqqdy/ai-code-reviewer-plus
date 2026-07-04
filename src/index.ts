@@ -4,8 +4,12 @@
  * Exports all public APIs
  */
 
+// Collectors
+export { collectCommitDiff, collectDiff } from './collectors/diff-collector'
+
+export { detectProject } from './collectors/project-detector'
 // Errors
-export { GitCommandError, ParseError, ConfigError } from './errors'
+export { ConfigError, GitCommandError, ParseError } from './errors'
 
 // Types
 export type {
@@ -14,8 +18,8 @@ export type {
 	FileReviewOptions,
 	ParsedDiff,
 	ProjectInfo,
-	ReviewerConfig,
 	ReviewDimension,
+	ReviewerConfig,
 	ReviewFinding,
 	ReviewOptions,
 	ReviewResult,
@@ -23,16 +27,12 @@ export type {
 } from './types'
 export { VERSION } from './types'
 
-// Collectors
-export { collectDiff, collectCommitDiff } from './collectors/diff-collector'
-export { detectProject } from './collectors/project-detector'
-
+export { getDefaultConfig, loadConfigFile, mergeConfig } from './utils/config'
 // Utils
 export {
-	formatFinding,
-	formatSummary,
-	formatReviewReport,
 	formatDiffSummary,
 	formatDuration,
+	formatFinding,
+	formatReviewReport,
+	formatSummary,
 } from './utils/format'
-export { getDefaultConfig, mergeConfig, loadConfigFile } from './utils/config'

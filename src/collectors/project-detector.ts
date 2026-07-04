@@ -11,10 +11,10 @@ import { join } from 'node:path'
  */
 export async function detectProject(root: string): Promise<ProjectInfo> {
 	const markers = [
-		{ file: 'package.json', type: 'node' },
-		{ file: 'go.mod', type: 'go' },
-		{ file: 'requirements.txt', type: 'python' },
-		{ file: 'Cargo.toml', type: 'rust' },
+		{ type: 'node', file: 'package.json' },
+		{ type: 'go', file: 'go.mod' },
+		{ type: 'python', file: 'requirements.txt' },
+		{ type: 'rust', file: 'Cargo.toml' },
 	]
 
 	for (const marker of markers) {
@@ -63,8 +63,8 @@ function detectNodeProject(root: string, packageJsonPath: string): ProjectInfo {
 		const deps = { ...pkg.dependencies, ...pkg.devDependencies }
 
 		// Vue detection
-		if (deps['vue'] || deps['Vue']) {
-			const version = deps['vue'] || deps['Vue'] || ''
+		if (deps.vue || deps.Vue) {
+			const version = deps.vue || deps.Vue || ''
 			const isVue3 = version.startsWith('^3') || version.startsWith('3')
 			return {
 				type: 'vue',
@@ -76,8 +76,8 @@ function detectNodeProject(root: string, packageJsonPath: string): ProjectInfo {
 		}
 
 		// React detection
-		if (deps['react'] || deps['React']) {
-			const version = deps['react'] || deps['React'] || ''
+		if (deps.react || deps.React) {
+			const version = deps.react || deps.React || ''
 			const isReact18 = version.startsWith('^18') || version.startsWith('18')
 			return {
 				type: 'react',
