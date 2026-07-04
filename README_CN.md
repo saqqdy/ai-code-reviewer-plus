@@ -1,10 +1,10 @@
-# 🚀 AI Code Reviewer
+# 🚀 AI Code Reviewer Plus
 
 > AI 智能代码审查 — 多维度语义分析，五级严重性分类，给出可执行的修复建议
 
-[![npm version](https://img.shields.io/npm/v/ai-code-reviewer.svg)](https://www.npmjs.com/package/ai-code-reviewer)
+[![npm version](https://img.shields.io/npm/v/ai-code-reviewer-plus.svg)](https://www.npmjs.com/package/ai-code-reviewer-plus)
 
-[英文文档](README.md) | [完整文档](https://ai-code-reviewer.vercel.app)
+[英文文档](README.md) | [完整文档](https://ai-code-reviewer-plus.vercel.app)
 
 ---
 
@@ -84,8 +84,8 @@ AI Code Reviewer 通过**语义理解**在五个维度分析代码：
 ### 方式 1: Claude Code 插件（推荐）
 
 ```bash
-/plugin marketplace add saqqdy/ai-code-reviewer
-/plugin install ai-code-reviewer
+/plugin marketplace add saqqdy/ai-code-reviewer-plus
+/plugin install ai-code-reviewer-plus
 ```
 
 ### 方式 2: CLI（零安装）
@@ -93,20 +93,20 @@ AI Code Reviewer 通过**语义理解**在五个维度分析代码：
 无需安装即可体验：
 
 ```bash
-npx ai-code-reviewer review --branch main
-npx ai-code-reviewer review-file src/index.ts
-npx ai-code-reviewer review-commit abc1234
-npx ai-code-reviewer help
+npx ai-code-reviewer-plus review --branch main
+npx ai-code-reviewer-plus review-file src/index.ts
+npx ai-code-reviewer-plus review-commit abc1234
+npx ai-code-reviewer-plus help
 ```
 
 ### 方式 3: NPM 包
 
 ```bash
-pnpm add ai-code-reviewer
+pnpm add ai-code-reviewer-plus
 ```
 
 ```typescript
-import { collectDiff, detectProject } from 'ai-code-reviewer'
+import { collectDiff, detectProject } from 'ai-code-reviewer-plus'
 
 const diffs = await collectDiff({ root: process.cwd(), targetBranch: 'main' })
 const project = await detectProject(process.cwd())
@@ -129,15 +129,15 @@ console.log(`框架: ${project.framework}`)
 
 ```bash
 # 步骤 1：即时体验 CLI（在任意 git 仓库中）
-npx ai-code-reviewer review --branch main
+npx ai-code-reviewer-plus review --branch main
 
 # 步骤 2：运行 API 示例
-git clone https://github.com/saqqdy/ai-code-reviewer.git
-cd ai-code-reviewer && pnpm install
+git clone https://github.com/saqqdy/ai-code-reviewer-plus.git
+cd ai-code-reviewer-plus && pnpm install
 npx tsx examples/basic-usage.ts
 
 # 步骤 3：完整 AI 审查（在 Claude Code 中）
-/plugin install ai-code-reviewer
+/plugin install ai-code-reviewer-plus
 /review main
 ```
 
@@ -145,7 +145,7 @@ npx tsx examples/basic-usage.ts
 
 ## ⚙️ 配置
 
-创建 `.ai-code-reviewer.yml` 自定义规则：
+创建 `.ai-code-reviewer-plus.yml` 自定义规则：
 
 ```yaml
 rules:

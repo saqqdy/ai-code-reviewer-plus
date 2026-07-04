@@ -1,10 +1,10 @@
 {
-  "name": "ai-code-reviewer",
+  "name": "ai-code-reviewer-plus",
   "description": "AI-powered intelligent code reviewer — multi-dimensional semantic analysis, five-tier severity classification, actionable fix suggestions via Claude Code Skill",
   "version": "0.1.0",
   "packageManager": "pnpm@9.15.9",
   "bin": {
-    "ai-code-reviewer": "./dist/cli.js"
+    "ai-code-reviewer-plus": "./dist/cli.js"
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -55,7 +55,7 @@
   },
   "sideEffects": false,
   "keywords": [
-    "ai-code-reviewer",
+    "ai-code-reviewer-plus",
     "code-review",
     "intelligent-review",
     "semantic-analysis",
@@ -65,12 +65,12 @@
   ],
   "license": "MIT",
   "author": "saqqdy<https://github.com/saqqdy>",
-  "homepage": "https://github.com/saqqdy/ai-code-reviewer#readme",
+  "homepage": "https://github.com/saqqdy/ai-code-reviewer-plus#readme",
   "bugs": {
-    "url": "https://github.com/saqqdy/ai-code-reviewer/issues"
+    "url": "https://github.com/saqqdy/ai-code-reviewer-plus/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saqqdy/ai-code-reviewer.git"
+    "url": "git+https://github.com/saqqdy/ai-code-reviewer-plus.git"
   }
 }

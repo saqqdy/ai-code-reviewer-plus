@@ -1,9 +1,9 @@
 {
-  "name": "ai-code-reviewer",
+  "name": "ai-code-reviewer-plus",
   "version": "0.1.0",
   "description": "AI Code Reviewer — AI-powered intelligent code reviewer via Claude Code Skill",
   "author": { "name": "saqqdy", "url": "https://github.com/saqqdy" },
-  "repository": "https://github.com/saqqdy/ai-code-reviewer",
+  "repository": "https://github.com/saqqdy/ai-code-reviewer-plus",
   "license": "MIT",
   "keywords": ["code-review", "ai", "semantic-analysis", "claude-code-skill"]
 }

@@ -1,4 +1,4 @@
-# Contributing to AI Code Reviewer
+# Contributing to AI Code Reviewer Plus
 
 Thanks for your interest! Here's how to get started.
 

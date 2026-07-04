@@ -44,7 +44,7 @@ main            ← 稳定发布分支（只接受 merge）
 | D1 上午 | 创建 GitHub 仓库，初始化项目结构 | 仓库 + 目录骨架 |
 | D1 下午 | 编写 CLAUDE.md、README.md | 项目文档 |
 | D2 上午 | 配置 CI（lint + 文件结构校验） | `.github/workflows/ci.yml` |
-| D2 下午 | 编写 `.ai-code-reviewer.example.yml` | 配置模板 |
+| D2 下午 | 编写 `.ai-code-reviewer-plus.example.yml` | 配置模板 |
 | D3 上午 | 创建测试 fixtures 骨架（5个文件） | `tests/fixtures/*` |
 | D3 下午 | 确认 Sprint 1 任务分配 | Sprint 1 Backlog |
 
@@ -156,7 +156,7 @@ main            ← 稳定发布分支（只接受 merge）
 
 | 包含 ✅ | 不包含 ❌ |
 |---------|-----------|
-| 加载 `.ai-code-reviewer.yml` 配置 | GitHub/GitLab 集成 |
+| 加载 `.ai-code-reviewer-plus.yml` 配置 | GitHub/GitLab 集成 |
 | 规则禁用（`rules.disable`） | 自定义规则编写 |
 | 规则严重级别调整（`rules.severity`） | 团队风格学习 |
 | 文件 include/exclude 过滤 | 增量审查 |
@@ -172,7 +172,7 @@ main            ← 稳定发布分支（只接受 merge）
 
 | 日期 | 任务 | 详细说明 | 产出 |
 |------|------|----------|------|
-| D1 | 编写配置文件解析逻辑（内嵌于 Skill prompt） | 在 Skill 中加入读取 `.ai-code-reviewer.yml` 的指令，使用 Claude Code 的文件读取能力 | Skill prompt 更新 |
+| D1 | 编写配置文件解析逻辑（内嵌于 Skill prompt） | 在 Skill 中加入读取 `.ai-code-reviewer-plus.yml` 的指令，使用 Claude Code 的文件读取能力 | Skill prompt 更新 |
 | D2 | 实现 `rules.disable` + `rules.severity` | 审查时跳过被禁用的规则，使用覆盖后的严重级别 | 功能实现 |
 | D3 | 实现 `include` / `exclude` 文件过滤 | 使用 glob 模式匹配，过滤掉 exclude 的文件变更 | 功能实现 |
 | D4 | 实现 `min_severity` + `max_findings` | 审查后按阈值过滤，按严重级别排序后截断 | 功能实现 |
@@ -180,7 +180,7 @@ main            ← 稳定发布分支（只接受 merge）
 
 **Sprint 3 完成标准**：
 
-- [ ] `.ai-code-reviewer.yml` 存在时，所有配置项生效
+- [ ] `.ai-code-reviewer-plus.yml` 存在时，所有配置项生效
 - [ ] 不存在配置文件时，使用默认值，行为与 v0.1.0 一致
 - [ ] 无效配置文件给出明确错误提示
 
@@ -453,7 +453,7 @@ git branch -d release/v0.1.0
 | 版本缺陷但可热修 | Patch release | 从 tag 创建 fix 分支，发布 v0.1.1 |
 | 版本严重缺陷 | 版本回退 | `git revert` merge commit，重打 tag |
 | CI 集成失败 | 禁用 workflow | 仓库 Settings → Actions → 禁用对应 workflow |
-| NPM 包有问题 | NPM 废弃 | `npm deprecate ai-code-reviewer@1.0.0 "reason"` |
+| NPM 包有问题 | NPM 废弃 | `npm deprecate ai-code-reviewer-plus@1.0.0 "reason"` |
 | 配置文件格式不兼容 | 版本锁定 | 文档标注受影响版本，提供迁移脚本 |
 
 ---

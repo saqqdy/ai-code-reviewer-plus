@@ -1,11 +1,11 @@
-# 🚀 AI Code Reviewer
+# 🚀 AI Code Reviewer Plus
 
 > AI-powered intelligent code reviewer — multi-dimensional semantic analysis, five-tier severity classification, actionable fix suggestions via Claude Code Skill.
 
-[![npm version](https://img.shields.io/npm/v/ai-code-reviewer.svg)](https://www.npmjs.com/package/ai-code-reviewer)
-[![license](https://img.shields.io/npm/l/ai-code-reviewer.svg)](https://github.com/saqqdy/ai-code-reviewer/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/ai-code-reviewer-plus.svg)](https://www.npmjs.com/package/ai-code-reviewer-plus)
+[![license](https://img.shields.io/npm/l/ai-code-reviewer-plus.svg)](https://github.com/saqqdy/ai-code-reviewer-plus/blob/master/LICENSE)
 
-[中文文档](README_CN.md) | [完整文档](https://ai-code-reviewer.vercel.app)
+[中文文档](README_CN.md) | [完整文档](https://ai-code-reviewer-plus.vercel.app)
 
 ---
 
@@ -88,8 +88,8 @@ Not all issues are equal. AI Code Reviewer classifies by impact:
 
 ```bash
 # In Claude Code, run:
-/plugin marketplace add saqqdy/ai-code-reviewer
-/plugin install ai-code-reviewer
+/plugin marketplace add saqqdy/ai-code-reviewer-plus
+/plugin install ai-code-reviewer-plus
 ```
 
 #### Available Commands
@@ -103,19 +103,19 @@ Not all issues are equal. AI Code Reviewer classifies by impact:
 ### Option 2: CLI (Zero-Install)
 
 ```bash
-npx ai-code-reviewer review --branch main
-npx ai-code-reviewer review-file src/index.ts
-npx ai-code-reviewer review-commit abc1234
+npx ai-code-reviewer-plus review --branch main
+npx ai-code-reviewer-plus review-file src/index.ts
+npx ai-code-reviewer-plus review-commit abc1234
 ```
 
 ### Option 3: Programmatic Usage
 
 ```bash
-pnpm add ai-code-reviewer
+pnpm add ai-code-reviewer-plus
 ```
 
 ```typescript
-import { collectDiff, detectProject } from 'ai-code-reviewer'
+import { collectDiff, detectProject } from 'ai-code-reviewer-plus'
 
 const diffs = await collectDiff({
   root: process.cwd(),
@@ -179,15 +179,15 @@ Not sure where to start? Follow this path:
 
 ```bash
 # Step 1: Try CLI instantly (in any git repo)
-npx ai-code-reviewer review --branch main
+npx ai-code-reviewer-plus review --branch main
 
 # Step 2: Run the API example
-git clone https://github.com/saqqdy/ai-code-reviewer.git
-cd ai-code-reviewer && pnpm install
+git clone https://github.com/saqqdy/ai-code-reviewer-plus.git
+cd ai-code-reviewer-plus && pnpm install
 npx tsx examples/basic-usage.ts
 
 # Step 3: Full AI-powered review (in Claude Code)
-/plugin install ai-code-reviewer
+/plugin install ai-code-reviewer-plus
 /review main
 ```
 
@@ -195,7 +195,7 @@ npx tsx examples/basic-usage.ts
 
 ## ⚙️ Configuration
 
-Create `.ai-code-reviewer.yml` to customize:
+Create `.ai-code-reviewer-plus.yml` to customize:
 
 ```yaml
 rules:
@@ -223,8 +223,8 @@ outputFormat: markdown
 ## 🗂️ Project Structure
 
 ```
-ai-code-reviewer/
-├── .claude/skills/ai-code-reviewer/  # Claude Code Skill
+ai-code-reviewer-plus/
+├── .claude/skills/ai-code-reviewer-plus/  # Claude Code Skill
 ├── src/                               # TypeScript source
 │   ├── collectors/                    # Git data collectors
 │   ├── utils/                         # Utilities

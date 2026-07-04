@@ -13,7 +13,7 @@ function printHelp(): void {
 🔍 AI Code Reviewer v${VERSION} — Intelligent Code Review
 
 Usage:
-  npx ai-code-reviewer <command> [options]
+  npx ai-code-reviewer-plus <command> [options]
 
 Commands:
   review [--branch <name>]     Review diff against target branch
@@ -23,13 +23,13 @@ Commands:
   version                      Show version
 
 Examples:
-  npx ai-code-reviewer review
-  npx ai-code-reviewer review --branch develop
+  npx ai-code-reviewer-plus review
+  npx ai-code-reviewer-plus review --branch develop
 `)
 }
 
 function printVersion(): void {
-	console.log(`ai-code-reviewer v${VERSION}`)
+	console.log(`ai-code-reviewer-plus v${VERSION}`)
 }
 
 async function runReview(args: string[]): Promise<void> {
@@ -75,7 +75,7 @@ async function runReviewFile(args: string[]): Promise<void> {
 	const file = args[0]
 	if (!file) {
 		console.error('Error: missing file argument')
-		console.log('Usage: npx ai-code-reviewer review-file <file>')
+		console.log('Usage: npx ai-code-reviewer-plus review-file <file>')
 		process.exit(1)
 	}
 	console.log(`\n🔍 Reviewing file: ${file}\n💡 Use Claude Code Skill: /review-file ${file}\n`)
@@ -85,7 +85,7 @@ async function runReviewCommit(args: string[]): Promise<void> {
 	const hash = args[0]
 	if (!hash) {
 		console.error('Error: missing hash argument')
-		console.log('Usage: npx ai-code-reviewer review-commit <hash>')
+		console.log('Usage: npx ai-code-reviewer-plus review-commit <hash>')
 		process.exit(1)
 	}
 	console.log(

@@ -11,7 +11,7 @@ A clear description of what the bug is.
 
 ## Steps to Reproduce
 
-1. Run `npx ai-code-reviewer review --branch main`
+1. Run `npx ai-code-reviewer-plus review --branch main`
 2. ...
 
 ## Expected Behavior

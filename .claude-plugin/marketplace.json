@@ -1,9 +1,9 @@
 {
-  "name": "ai-code-reviewer",
+  "name": "ai-code-reviewer-plus",
   "description": "AI-powered intelligent code reviewer via Claude Code Skill",
   "owner": { "name": "saqqdy", "url": "https://github.com/saqqdy" },
   "plugins": [{
-    "name": "ai-code-reviewer",
+    "name": "ai-code-reviewer-plus",
     "description": "AI-powered intelligent code reviewer via Claude Code Skill",
     "version": "0.1.0",
     "author": { "name": "saqqdy", "url": "https://github.com/saqqdy" },

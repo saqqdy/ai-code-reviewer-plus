@@ -53,7 +53,7 @@ export function getDefaultConfig(): ReviewerConfig {
  */
 export function loadConfigFile(
 	root: string,
-	fileName = '.ai-code-reviewer.yml'
+	fileName = '.ai-code-reviewer-plus.yml'
 ): Partial<ReviewerConfig> {
 	const filePath = join(root, fileName)
 

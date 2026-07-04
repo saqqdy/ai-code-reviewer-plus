@@ -5,9 +5,9 @@
 ### 🚀 Initial Release
 
 - **cli**: add zero-install CLI for quick experience
-  - `npx ai-code-reviewer review` — review diff against target branch
-  - `npx ai-code-reviewer review-file <file>` — review single file
-  - `npx ai-code-reviewer review-commit <hash>` — review commit
+  - `npx ai-code-reviewer-plus review` — review diff against target branch
+  - `npx ai-code-reviewer-plus review-file <file>` — review single file
+  - `npx ai-code-reviewer-plus review-commit <hash>` — review commit
 - **collectors**: add diff parsing and project detection
   - `collectDiff()` — parse `git diff` output into structured data
   - `collectCommitDiff()` — diff for single commit
@@ -16,7 +16,7 @@
   - `formatFinding()` — format single finding as Markdown
   - `formatReviewReport()` — generate full Markdown report
   - `mergeConfig()` — merge user config with defaults
-  - `loadConfigFile()` — load `.ai-code-reviewer.yml`
+  - `loadConfigFile()` — load `.ai-code-reviewer-plus.yml`
 - **skill**: add Claude Code Skill definition
   - Commands: `/review`, `/review-file`, `/review-commit`
   - Multi-dimensional analysis: correctness/security/performance/maintainability/best-practices
@@ -25,7 +25,7 @@
 ### 📝 Documentation
 
 - Add README.md and README_CN.md with usage guides
-- Add `.ai-code-reviewer.example.yml` configuration template
+- Add `.ai-code-reviewer-plus.example.yml` configuration template
 - Add example scripts in `examples/`
 
 ### 🔧 Chores

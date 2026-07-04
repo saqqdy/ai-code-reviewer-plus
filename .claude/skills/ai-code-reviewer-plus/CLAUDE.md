@@ -1,4 +1,4 @@
-# AI Code Reviewer — Claude Code Guide
+# AI Code Reviewer Plus — Claude Code Guide
 
 ## Project Overview
 
@@ -7,7 +7,7 @@ AI Code Reviewer 是一个 Claude Code Skill 插件，用 AI 语义理解替代�
 ## Architecture
 
 ```
-.claude/skills/ai-code-reviewer/  ← Skill 定义
+.claude/skills/ai-code-reviewer-plus/  ← Skill 定义
 src/                               ← TypeScript 源码
 internal/                          ← 内部规划文档
 ```

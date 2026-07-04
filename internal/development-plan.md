@@ -64,10 +64,10 @@
 ## 三、项目结构
 
 ```
-ai-code-reviewer/
+ai-code-reviewer-plus/
 ├── CLAUDE.md                          # 项目级 Claude 指令
 ├── README.md                          # 项目说明
-├── .ai-code-reviewer.example.yml      # 配置文件示例
+├── .ai-code-reviewer-plus.example.yml      # 配置文件示例
 ├── skills/
 │   └── smart-code-reviewer.md         # 核心 Skill 定义
 ├── scripts/
@@ -177,7 +177,7 @@ SUGGESTION→ 纯建议。个人偏好、可选优化
 ## 六、配置文件设计
 
 ```yaml
-# .ai-code-reviewer.yml
+# .ai-code-reviewer-plus.yml
 version: 1
 
 # 项目基本信息（可选，支持自动检测）
@@ -278,7 +278,7 @@ db.query(query, [userId])
 | 可维护性 | ⭐⭐⭐⭐ | 1 |
 | 最佳实践 | ⭐⭐⭐⭐⭐ | 0 |
 
-> 🤖 Powered by [Smart Code Reviewer](https://github.com/saqqdy/ai-code-reviewer)
+> 🤖 Powered by [Smart Code Reviewer](https://github.com/saqqdy/ai-code-reviewer-plus)
 ```
 
 ### 7.2 结构化 JSON（用于程序消费）
@@ -331,7 +331,7 @@ db.query(query, [userId])
 | 编写 `scripts/detect-project.sh` | 能识别 Vue/React/Node/Go/Python 项目类型 |
 | 编写 5 维度审查规则 `rules/*.md` | 每个维度至少 5 条规则，附带示例代码 |
 | 实现基本审查流程 | 对测试 fixtures 运行审查，输出 ≥80% 规则命中 |
-| 编写配置文件模板 | `.ai-code-reviewer.example.yml` 可用 |
+| 编写配置文件模板 | `.ai-code-reviewer-plus.example.yml` 可用 |
 | 编写测试 fixtures | 至少 5 个含已知问题的代码文件 |
 
 **交付物**：可手动触发的代码审查 Skill，输出 Markdown 格式审查报告。
@@ -344,7 +344,7 @@ db.query(query, [userId])
 
 | 任务 | 验收标准 |
 |------|---------|
-| 实现配置文件加载逻辑 | 读取 `.ai-code-reviewer.yml`，覆盖默认规则 |
+| 实现配置文件加载逻辑 | 读取 `.ai-code-reviewer-plus.yml`，覆盖默认规则 |
 | 实现规则禁用/级别调整 | 配置中 `disable` / `severity` 生效 |
 | 实现文件过滤 | `include` / `exclude` glob 匹配正确 |
 | 按项目类型加载框架规则 | Vue 项目自动加载 `best-practices/vue.md` |
