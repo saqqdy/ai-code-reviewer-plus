@@ -39,8 +39,9 @@ Thumbs.db
 # Claude plugin marketplace files (needed for distribution)
 # .claude-plugin/
 
-# VitePress cache
+# VitePress
 docs/.vitepress/cache/
+docs/.vitepress/dist/
 
 # Internal planning (uncomment to ignore)
 # internal/
