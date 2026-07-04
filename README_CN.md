@@ -115,6 +115,34 @@ console.log(`框架: ${project.framework}`)
 
 ---
 
+## 🚀 快速体验
+
+不知道从哪开始？按这个路径走：
+
+| 步骤 | 方式 | 时间 | 体验内容 |
+|------|------|------|----------|
+| 1 | CLI | 1 分钟 | Diff 采集 + 项目检测 |
+| 2 | API 示例 | 3 分钟 | 编程接口 + 格式化输出 |
+| 3 | Skill | 5 分钟 | **完整审查**（规则引擎 + AI 分析） |
+
+**最快路径**：安装 Skill，运行 `/review main` — 一条命令体验全部。
+
+```bash
+# 步骤 1：即时体验 CLI（在任意 git 仓库中）
+npx ai-code-reviewer review --branch main
+
+# 步骤 2：运行 API 示例
+git clone https://github.com/saqqdy/ai-code-reviewer.git
+cd ai-code-reviewer && pnpm install
+npx tsx examples/basic-usage.ts
+
+# 步骤 3：完整 AI 审查（在 Claude Code 中）
+/plugin install ai-code-reviewer
+/review main
+```
+
+---
+
 ## ⚙️ 配置
 
 创建 `.ai-code-reviewer.yml` 自定义规则：

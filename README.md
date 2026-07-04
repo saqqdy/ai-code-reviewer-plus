@@ -165,6 +165,34 @@ const project = await detectProject(process.cwd())
 
 ---
 
+## 🚀 Quick Experience
+
+Not sure where to start? Follow this path:
+
+| Step | Method | Time | What You'll See |
+|------|--------|------|-----------------|
+| 1 | CLI | 1 min | Diff collection + project detection |
+| 2 | API example | 3 min | Programmatic interface + formatting |
+| 3 | Skill | 5 min | **Full review** (rules + AI analysis) |
+
+**Fastest path**: Install the Skill, run `/review main` — one command, full experience.
+
+```bash
+# Step 1: Try CLI instantly (in any git repo)
+npx ai-code-reviewer review --branch main
+
+# Step 2: Run the API example
+git clone https://github.com/saqqdy/ai-code-reviewer.git
+cd ai-code-reviewer && pnpm install
+npx tsx examples/basic-usage.ts
+
+# Step 3: Full AI-powered review (in Claude Code)
+/plugin install ai-code-reviewer
+/review main
+```
+
+---
+
 ## ⚙️ Configuration
 
 Create `.ai-code-reviewer.yml` to customize:
